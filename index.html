@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
@@ -10,7 +11,7 @@
       <header><h1>Welcome to my AI Haiku Generator</h1></header>
 
       <main>
-        <form>
+        <form id="haiku-generator">
           <input
             style="text"
             placeholder="Enter the topic of the Haiku"
@@ -21,10 +22,8 @@
           <input type="submit" class="instruction-button" />
         </form>
       </main>
-      <div class="haiku">
-        Text of the haiku
+      <div class="haiku" id="haiku">
         <br />
-        Text of the haiku
       </div>
 
       <footer>
