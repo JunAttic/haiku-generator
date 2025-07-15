@@ -48,6 +48,9 @@ form {
   font-size: 18px;
 }
 
+.haiku strong {
+  color: #6ac1b8;
+}
 footer {
   text-align: center;
   font-size: 14px;
