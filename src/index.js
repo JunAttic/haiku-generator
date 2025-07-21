@@ -1,4 +1,7 @@
 function displayHaiku(response) {
+  let haikuElement = document.querySelector("#haiku");
+  haikuElement.classList.remove("hidden");
+
   new Typewriter("#haiku", {
     strings: response.data.answer,
     autoStart: true,
@@ -16,6 +19,9 @@ function generateHaiku(event) {
   let context =
     "you are an Haiku expert,your goal is to generate 2 lines haiku, separate each line with a <br /> ,make sure to follow user instruction.The last word of the haiku MUST be inside a <strong> element";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let haikuElement = document.querySelector("#haiku");
+  haikuElement.innerHTML = `<div class="generating">⏳ Generating an Haiku ${instructionsInput.value}</div>`;
 
   axios.get(apiUrl).then(displayHaiku);
 }
